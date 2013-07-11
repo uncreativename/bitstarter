@@ -10,7 +10,7 @@ var buffer = new Buffer('utf-8');
 
 fs.readFile('index.html', 'utf-8', function(error, data)
 {
-	if (err) throw err;
+	//if (err) throw err;
 	//return data;
 
 });
