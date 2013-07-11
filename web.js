@@ -2,33 +2,29 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var fs = require("fs");
+var fs = require('fs');
 
-var buffer = new Buffer(data, "utf-8");
+var buffer = new Buffer(data, 'utf-8');
 
-/*
-fs.readFileSync("/home/ubuntu/bitstarter/index.html", "utf8", function(err, data)
+
+fs.readFileSync("/home/ubuntu/bitstarter/index.html", "utf8",
 {
-
 	app.get('/', function(request, response)
 	{
 		response.send(data);
 	});
 
-	if(err) throw err;
 
 }); //end of readFileSync
 
-*/
 
 
 
-app.get('/', function(request, response)
-{
-	response.send(buffer.toString('utf8', 0, num) );
-});
 
-
+//app.get('/', function(request, response)
+//{
+//	response.send(buffer.toString('utf8', 0, num) );
+//});
 
 
 var port = process.env.PORT || 5000;
