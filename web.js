@@ -6,16 +6,16 @@ var fs = require('fs');
 
 var buffer = require('buffer');
 
+var buffer = new Buffer;
 
 
 
 fs.readFile("index.html", "utf8", function(error, data)
 {
-
 	if (err) throw err;
-	var buffer = new Buffer(data);
+	buffer = data;
 
-}); //end of readFileSync
+});
 
 
 
