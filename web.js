@@ -2,6 +2,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var data, err;
+
 fs.readFile('/home/ubuntu/bitstarter/index.html', function(err,data) ) 
 {
 	if (err) throw err;
