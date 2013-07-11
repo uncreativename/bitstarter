@@ -12,7 +12,7 @@ var buffer = new Buffer(data, "utf-8");
 
 app.get('/', function(request, response)
 {
-	response.send(data);
+	response.send("data");
 });
 
 var port = process.env.PORT || 5000;
