@@ -8,10 +8,10 @@ var fs = require('fs');
 
 var buffer = new Buffer('utf-8');
 
-fs.readFile('index.html', 'utf-8', function(error, data)
+buffer = fs.readFile('index.html', 'utf-8', function(error, data)
 {
 	//if (err) throw err;
-	//return data;
+	return data;
 
 });
 
