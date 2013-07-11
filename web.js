@@ -4,15 +4,16 @@ var app = express.createServer(express.logger());
 
 var fs = require('fs');
 
-var buffer = new Buffer(data, 'utf-8');
+var buffer = require('buffer');
+
+
 
 
 fs.readFile("index.html", "utf8", function(error, data)
 {
-	app.get('/', function(request, response)
-	{
-		response.send(data);
-	});
+
+	if (err) throw err;
+	var buffer = new Buffer(data);
 
 }); //end of readFileSync
 
@@ -20,10 +21,10 @@ fs.readFile("index.html", "utf8", function(error, data)
 
 
 
-//app.get('/', function(request, response)
-//{
-//	response.send(buffer.toString('utf8', 0, num) );
-//});
+app.get('/', function(request, response)
+{
+	response.send(buffer.toString('utf-8'));
+});
 
 
 var port = process.env.PORT || 5000;
