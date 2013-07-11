@@ -1,9 +1,18 @@
-var express = require('express');
+//var express = require('express');
 
-var app = express.createServer(express.logger());
+//var app = express.createServer(express.logger());
 
-var data;
-var err;
+fs = require('fs');
+fs.readFile('/home/ubuntu/bitstarter/index.html', 'utf8', function(err, data))
+{
+	if(err)
+	{
+		return console.log(err);
+	}
+	console.log(data);
+}
+
+
 
 fs.readFile('/home/ubuntu/bitstarter/index.html', function(err,data) ) 
 {
