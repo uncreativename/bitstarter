@@ -12,7 +12,7 @@ fs.readFile("index.html", "utf8", function(error, data)
 	app.get('/', function(request, response)
 	{
 		response.send(data);
-	})
+	});
 
 }); //end of readFileSync
 
