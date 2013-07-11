@@ -6,11 +6,12 @@ var app = express.createServer(express.logger());
 
 var fs = require('fs');
 
-var buffer = new Buffer('utf-8');
+var buffer = new Buffer('hello','utf-8');
 
 buffer = fs.readFile('index.html', 'utf-8', function(error, data)
 {
 	//if (err) throw err;
+	
 	return data;
 
 });
