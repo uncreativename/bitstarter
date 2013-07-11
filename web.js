@@ -8,11 +8,11 @@ fs.readFile('/home/ubuntu/bitstarter/index.html', function(err,data) )
 	console.log(data);
 });
 
-var buffer = new Buffer("data", "utf-8");
+var buffer = new Buffer(data, "utf-8");
 
 app.get('/', function(request, response)
 {
-	response.send(buffer.toString);
+	response.send(data);
 });
 
 var port = process.env.PORT || 5000;
