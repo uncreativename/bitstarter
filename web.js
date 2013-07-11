@@ -7,9 +7,8 @@ var fs = require('fs');
 var buffer = new Buffer(data, 'utf-8');
 
 
-fs.readFileSync("/home/ubuntu/bitstarter/index.html", "utf8",
+fs.readFileSync("/home/ubuntu/bitstarter/index.html", "utf8", app.get('/', function(request, response) 
 {
-	app.get('/', function(request, response)
 	{
 		response.send(data);
 	});
