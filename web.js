@@ -8,7 +8,7 @@ var app = express.createServer(express.logger());
 //	console.log(data);
 //});
 
-var buffer = new Buffer(data, "utf-8");
+var buffer = new Buffer("testing2", "utf-8");
 
 app.get('/', function(request, response)
 {
