@@ -14,16 +14,34 @@ var buffer;
 buffer = fs.readFile('index.html', function(err, data)
 {
 	if (err) throw err;
-	return data;
+	//return data;
+
+	app.get('/', function(request, response)
+	{
+        	response.send(data);
+        	//response.send('string');
+	});
+
+
+	var port = process.env.PORT || 5000;
+
+	app.listen(port, function()
+	{
+        	console.log("Listening on " + port);
+	});
 
 });
 
 
+
+
+/*
 app.get('/', function(request, response)
 {
 	response.send(buffer);
 	//response.send('string');
 });
+
 
 
 var port = process.env.PORT || 5000;
@@ -35,3 +53,4 @@ app.listen(port, function()
 });
 
 
+*/
