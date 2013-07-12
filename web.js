@@ -21,7 +21,7 @@ buffer = fs.readFile('index.html', function(err, data)
 
 app.get('/', function(request, response)
 {
-	response.send(buffer.toString());
+	response.send(buffer);
 	//response.send('string');
 });
 
