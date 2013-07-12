@@ -20,7 +20,7 @@ buffer = fs.readFile('index.html', 'utf8', function(err, data)
 
 app.get('/', function(request, response)
 {
-	response.send(buffer.toString(''));
+	response.send(buffer.toString());
 	//response.send('string');
 });
 
