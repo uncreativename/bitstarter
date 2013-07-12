@@ -9,17 +9,18 @@ var fs = require('fs');
 
 var buffer = new Buffer('hello','utf-8');
 
+/*
 buffer = fs.readFile('index.html', 'utf8', function(err, data)
 {
 	if (err) throw err;
 	return data;
 
 });
-
+*/
 
 app.get('/', function(request, response)
 {
-	response.send(buffer.toString);
+	response.send(buffer.toString(''));
 	//response.send('string');
 });
 
